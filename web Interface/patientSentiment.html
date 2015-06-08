@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sentiment Type', 'Patient Percentage'],
+          ['Most Negative', 0],
+          ['Negative', 2],
+          ['Positive', 58],
+          ['Most Positive', 10]
+        ]);
+
+        var options = {
+          title: 'Patient Sentiment',
+		  is3D: true,
+		};
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 1000px; height: 600px;"></div>
+  </body>
+</html>

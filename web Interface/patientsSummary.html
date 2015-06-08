@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["table"]});
+      google.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Location');
+        data.addColumn('number', 'Followers Count');
+		data.addColumn('number', 'Friends Count');
+		data.addColumn('number', 'Tweet Counts');
+		data.addColumn('number', 'Retweet Count');
+		data.addColumn('string', 'Mobility Type');
+		data.addColumn('string', 'Sentiment Type');
+        data.addRows([          
+			["Chris Rodgers","Alabama",840,1887,354,94,"Less mobile","Positive"],
+			["Ira Edwards","Alaska",288,584,697,141,"Not Known","Positive"],
+			["Jillanie Marcon","Arizona",43,182,1085,230,"Less mobile","Positive"],
+			["Marcos Castillo","Arizona",104,287,404,24,"Not Known","Positive"],
+			["Mathieu Bertrand","Arizona",43,488,200,58,"Not Known","Positive"],
+			["vikranth","Bangalore",22,124,496,482,"Less mobile","Positive"],
+			["cameron carr","Brisbane",163,90,92,70,"Not Known","Positive"],
+			["Rob Pyne","Cairns",6849,4112,1044,245,"Not Known","Positive"],
+			["CANDLES for SMA","California",845,1868,215,3,"Not Known","Positive"],
+			["Christiaan Bailey","California",408,44,875,0,"Less mobile","Positive"],
+			["Deborah","California",2898,1997,3195,1141,"Less mobile","Positive"],
+			["Grant Korgan","California",562,127,534,89,"Not Known","Positive"],
+			["Mahaitia","California",469,1984,3112,1571,"More mobile","Positive"],
+			["Sheriff Rocky","California",2757,1499,3240,33,"Not Known","Positive"],
+			["Delynne Bortis","Canada",28,54,20,9,"Not Known","Most Positive"],
+			["Kyle R. Osmachenko","Canada",128,859,213,75,"Not Known","Negative"],
+			["Alison Macpherson","Canada",27,57,17,1,"Not Known","Positive"],
+			["EM & M","Canada",39,241,235,156,"Not Known","Positive"],
+			["Emmz","Canada",178,944,1974,190,"More mobile","Positive"],
+			["Frank Block","Canada",662,837,1199,165,"Not Known","Positive"],
+			["Kary Wright","Canada",392,104,234,1,"Not Known","Positive"],
+			["Kevin Rempel","Canada",2153,429,2977,459,"Not Known","Positive"],
+			["Kimberly Joines","Canada",576,368,567,134,"More mobile","Positive"],
+			["Laurel G","Canada",2504,2448,3188,2314,"Not Known","Positive"],
+			["Tracy Schmitt","Canada",221,1096,191,31,"Not Known","Positive"],
+			["Tyler Mosher","Canada",650,251,678,131,"Not Known","Positive"],
+			["George Claxton","England",152,543,142,75,"Less mobile","Most Positive"],
+			["tony trev baker ","England",215,834,42,1,"Not Known","Most Positive"],
+			["﻿Alan Tonge","England",6622,1240,3188,249,"Not Known","Positive"],
+			["Dave ","England",2467,2137,3196,1000,"Not Known","Positive"],
+			["Jennifer's Journey","England",67,136,107,2,"Not Known","Positive"],
+			["Julie Darwin","England",137,181,844,5,"Not Known","Positive"],
+			["Mark Sanger","England",649,1715,674,7,"More mobile","Positive"],
+			["Nathalie McGloin","England",554,316,2358,191,"More mobile","Positive"],
+			["Nina White","England",5521,1750,3238,255,"Not Known","Positive"],
+			["Tacye Graves","England",6,27,14,3,"Not Known","Positive"],
+			["Vicky Seager","England",223,382,2204,124,"More mobile","Positive"],
+			["Seppo Lindewall","Finland",223,435,532,57,"Less mobile","Most Positive"],
+			["Paraplegic Drummer","Florida",1258,1744,3209,216,"Not Known","Positive"],
+			["rich","Florida",18,85,10,1,"Not Known","Positive"],
+			["Herve","France",108,155,52,11,"Not Known","Positive"],
+			["Trinity Hamilton","France",13,69,14,3,"Not Known","Positive"],
+			["Will McConnell","Georgia",41,27,16,5,"Not Known","Most Positive"],
+			["michael allison","Georgia",13100,10165,2043,1355,"More mobile","Positive"],
+			["Paraplegic Parenting","Georgia",406,1367,83,26,"Not Known","Positive"],
+			["BRITZ317","Hawaii",800,1023,3180,236,"Not Known","Positive"],
+			["andi soegiarto","Indonesia",76,399,115,11,"Not Known","Positive"],
+			["Conn Nagle","Ireland",27,246,3,0,"Not Known","Most Positive"],
+			["Patrice Dockery","Ireland",181,193,774,206,"Not Known","Most Positive"],
+			["Noelle Daly","Ireland",37,234,8,1,"Not Known","Positive"],
+			["Sam Humphries","Ireland",635,499,3176,351,"More mobile","Positive"],
+			["Siobhan Mungovan","Ireland",524,1112,585,136,"Less mobile","Positive"],
+			["Takuma AOKI","Japan",4919,141,3227,340,"Less mobile","Positive"],
+			["Ken Trudgeon","London",139,601,132,34,"Not Known","Positive"],
+			["Dale Vancourt","Louisiana",45,175,17,0,"Not Known","Positive"],
+			["RIP Ricky Bannister","Melbourne",231,136,102,55,"Not Known","Most Positive"],
+			["Paul Mariager","Melbourne",220,1067,3189,246,"More mobile","Positive"],
+			["Dillon Borowicz","Minnesota",95,139,565,427,"Not Known","Positive"],
+			["Lynne Dorr","Minnesota",180,477,532,48,"Less mobile","Positive"],
+			["Tiffiny Carlson","Minnesota",3725,2895,3195,745,"Not Known","Positive"],
+			["Suzanne Brok","Netherlands",8140,8776,3226,19,"Not Known","Positive"],
+			["Brian Freeman","New York",1176,1620,2508,768,"More mobile","Most Positive"],
+			["Tim O'Neill","New York",13,47,13,0,"Not Known","Negative"],
+			["Tanya Hooks","Ohio",98,615,56,0,"Not Known","Positive"],
+			["Wayne Burton","Queensland",340,239,737,60,"Not Known","Most Positive"],
+			["Catherine van Staden","South Africa",99,535,737,137,"Not Known","Positive"],
+			["Peter Overton","Sydney",34480,999,3208,1189,"Not Known","Positive"],
+			["Taylor mitchell","Sydney",793,1996,3120,1119,"Not Known","Positive"],
+			["Over-Educated Nympho","Texas",1743,1190,3218,125,"Not Known","Positive"],
+			["Thomas Peters","Washington",22642,540,3219,1358,"Not Known","Positive"]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true});
+      }
+    </script>
+  </head>
+  <body>
+    <div id="table_div"></div>
+  </body>
+</html>

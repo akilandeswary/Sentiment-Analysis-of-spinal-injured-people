@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      
+	  google.load("visualization", "1.1", {packages:["bar"]});
+      google.setOnLoadCallback(drawChart);
+      
+	  function drawChart() {
+      	var data = google.visualization.arrayToDataTable([
+          ['Mobility', 'Most positive', 'Positive', 'Negative'],
+          ['Mobility unknown', 10, 58.57, 2.857],
+		  ['More mobile', 1.428, 12.857, 0],
+          ['Less mobile', 2.857, 11.428, 0]
+        ]);
+        var options = {
+          chart: {
+            title: 'Mobility vs Sentiment'
+		  }, 
+          axes: {
+            x: {
+               0: {label: 'Percentage'} 
+            }
+		  },
+          bars: 'horizontal' 
+        };
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barchart_material" style="width: 1000px; height: 600px;"></div>
+ </body>
+</html>

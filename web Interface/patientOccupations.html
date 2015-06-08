@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Activities Involved', 'Percentage'],
+          ['Sports',  25],
+          ['Activists', 5],
+          ['Writers',  9],
+          ['Charity', 4],
+		  ['Other', 27]
+        ]);
+
+        var options = {
+          title: 'Patients\' Activities',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 1000px; height: 600px;"></div>
+  </body>
+</html>

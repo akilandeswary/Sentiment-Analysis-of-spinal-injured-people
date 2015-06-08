@@ -1,0 +1,18 @@
+		header { 
+			display: block;
+		}
+		.headerImg{
+			text-align:center;
+		}
+		.textStyle{
+			font-size:x-large;
+			color:OrangeRed;
+			font-weight: bold;
+		}
+		.headingStyle{
+			font-size: xx-large;
+			color : Blue;
+			font-weight: bold;
+			z-index: 10
+		}
+	
